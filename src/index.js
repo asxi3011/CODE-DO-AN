@@ -1,7 +1,7 @@
 const express = require('express')
 const exphbs  = require('express-handlebars');
 const path = require('path');
-const port = process.env.PORT; //heoroku port
+const port = process.env.PORT || 3030; //heoroku port
 const route = require('./route/index.js')
 const methodOverride = require('method-override');
 const multer  = require('multer');
@@ -28,6 +28,6 @@ app.engine('.hbs', exphbs(
 app.use(methodOverride('_method'));
 app.set('view engine', '.hbs');
 route(app);
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log(`Example app listening at http://localhost:3000`)
 })
