@@ -1,7 +1,7 @@
 const express = require('express')
 const exphbs  = require('express-handlebars');
 const path = require('path');
-const port = process.env.PORT || 3030; //heoroku port
+const port = process.env.PORT || 3030;  //heoroku port
 const route = require('./route/index.js')
 const methodOverride = require('method-override');
 const multer  = require('multer');
